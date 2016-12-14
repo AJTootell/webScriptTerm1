@@ -1,0 +1,231 @@
+
+# ██████   █████  ███████ ██  ██████ ███████
+# ██   ██ ██   ██ ██      ██ ██      ██
+# ██████  ███████ ███████ ██ ██      ███████
+# ██   ██ ██   ██      ██ ██ ██           ██
+# ██████  ██   ██ ███████ ██  ██████ ███████
+
+function #functionName (#functionParameters) {
+  #codeToRun
+  #object.#attribute = #value
+  var #variableName = #value
+  if(#booleanQuery){
+    #codeToRunIfTrue
+  }else{
+    #codeToRunIfFalse
+  }
+  #booleanQuery ? #runIfTrue : #runIfFalse ;
+  for(var #tempObjectName of #list){
+    #codeRunForEveryObjectInTheList
+  }
+  for(#init; #continueCondition; #runOnEachInterval){
+    #codeToRunWhileConditionIsTrue
+  }
+  while(#condition){
+    #codeToRunWhileConditionIsTrue
+  }
+
+  return #infoToPassOutOfFunction
+}
+
+||  - OR
+&&  - AND
+=   - equal
+==  - equivalent
+!=  - not equivalent
+=== - deep equivalent
+%   - modulus/remainder
+
+/*
+██████   ██████  ███    ███
+██   ██ ██    ██ ████  ████
+██   ██ ██    ██ ██ ████ ██
+██   ██ ██    ██ ██  ██  ██
+██████   ██████  ██      ██
+*/
+
+#element.#attribute
+document.getElementByID(#elementsID)
+
+
+Attributes
+textContent               - test held in the element
+(img.)src                 - where to find the image
+(img.)alt                 - alternative text when can't load img
+(img.)title               - name of the image
+id                        - ID of the elements, can get or change
+classList                 - list of classes that the element is part of
+classList.add
+classList.remove
+createElement(#name)      - make a new element of type #name
+querySelectorAll()        - select all elements in an array that match the #query
+children                  - array of all the elements child elements
+insertBefore(#newEl,#el)  - insert #newEl into list of elements in position before #el
+append(#el)               - insert #el onto end of the list of elements
+parentNode                - select the nodes parent node
+remove()                  - delete the selected node
+
+/*
+███████ ██    ██ ███████ ███    ██ ████████ ███████
+██      ██    ██ ██      ████   ██    ██    ██
+█████   ██    ██ █████   ██ ██  ██    ██    ███████
+██       ██  ██  ██      ██  ██ ██    ██         ██
+███████   ████   ███████ ██   ████    ██    ███████
+*/
+
+  window.#element.addEventListener(#action,#functionToRun)
+
+  function #eventHandler(#event){}
+
+  event.type == #action
+
+  event.target == #elementaddedTo
+
+  event.screenX/Y == #mousePoitionWhenEventFired
+
+/*
+ ██████  █████  ███    ██ ██    ██  █████  ███████
+██      ██   ██ ████   ██ ██    ██ ██   ██ ██
+██      ███████ ██ ██  ██ ██    ██ ███████ ███████
+██      ██   ██ ██  ██ ██  ██  ██  ██   ██      ██
+ ██████ ██   ██ ██   ████   ████   ██   ██ ███████
+*/
+
+  var #name = #element.getContext("2D");
+  var #canvasName = element.getByID('#canvasName')
+  #canvasName.width/height
+
+  #name.atrri
+  lineWidth = #size
+  lineCap = #styleEGround
+  lineJoin = #styleEGround
+  strokeStyle = #colour
+  beginPath()
+  lineTo(x,y)
+  moveTo(x,y)
+  stroke()
+  arc(#x,#y,#radius,#angleStart,#angleEnd,#false/true)
+  fill()
+  fillStyle = #colour
+
+  drawImage(#imgFile, #x, #y)
+
+/*
+██   ██ ██   ██ ██████
+ ██ ██  ██   ██ ██   ██
+  ███   ███████ ██████
+ ██ ██  ██   ██ ██   ██
+██   ██ ██   ██ ██   ██
+*/
+
+  var xhr = new XMLHttpRequest()
+
+  xhr.open(#HTTPMethod, #dir, #asyncTrueOrFalse)
+
+  xhr.onLoad = #callBack()
+
+  xhr.send
+
+  xhr.reponseText
+
+  setInterval(#callBack(){},#timeBeforeRepeat)
+
+  xhr.status #200,#404
+
+/*
+██   ██  █████   ██████ ██   ██  ██
+██   ██ ██   ██ ██      ██  ██  ███
+███████ ███████ ██      █████    ██
+██   ██ ██   ██ ██      ██  ██   ██
+██   ██ ██   ██  ██████ ██   ██  ██
+*/
+
+
+
+/*
+███    ██  ██████  ██████  ███████        ██        ███    ██ ██████  ███    ███
+████   ██ ██    ██ ██   ██ ██             ██        ████   ██ ██   ██ ████  ████
+██ ██  ██ ██    ██ ██   ██ █████       ████████     ██ ██  ██ ██████  ██ ████ ██
+██  ██ ██ ██    ██ ██   ██ ██          ██  ██       ██  ██ ██ ██      ██  ██  ██
+██   ████  ██████  ██████  ███████     ██████       ██   ████ ██      ██      ██
+*/
+
+  modules.export.#funcName = #funcName
+
+  var #funcName = require(#directory\file||#onlineNodeModule)
+
+  modules
+  http
+    var #server = http.createServer(#callbackFuncOnConnection(req,res))
+    res.statusCode - set the servers status code on reponse e.g. 200,404
+    res.setHeader('content-type', #encodingType/fileType)
+    res.end(#message); - output message to web-page
+
+    #server.listen(#portE.g.'8080')
+  url
+    var #urlConnected url.parse(req.url, true) - get url connected from
+    #urlConnected.pathname - path after the webserver connection e.g. '/add'
+    #urlConnected.query.#variableNameInURL - retrieve variable from the url
+  underscore
+    _.max(#array)
+    _.min(#array)
+  express
+    #app = express()
+    app.get(#urlPath,#callbackFunc(res,req){
+      res.send()
+    })
+    #app.listen(#port)
+
+/*
+███████ ██ ██      ███████ ███████
+██      ██ ██      ██      ██
+█████   ██ ██      █████   ███████
+██      ██ ██      ██           ██
+██      ██ ███████ ███████ ███████
+*/
+
+  modules
+  fs
+    #data = fs.readFileSync(#filePath, #encodingE.g'utf8')
+    #stream = fs.createWriteStream(#stringToWrite, {flags: #flagsAppliedE.g.'w','xw'})
+    #stream.write(#string)
+    #stream.end() - close the string so not keep running
+
+  #!/#dir/#file node - can run js file from cli
+  process.argv - array of inputs from cli starting from [2]
+  process.exit - end running of file, like return or break
+
+  /*
+  ██████   █████  ████████  █████  ██████   █████  ███████ ███████
+  ██   ██ ██   ██    ██    ██   ██ ██   ██ ██   ██ ██      ██
+  ██   ██ ███████    ██    ███████ ██████  ███████ ███████ █████
+  ██   ██ ██   ██    ██    ██   ██ ██   ██ ██   ██      ██ ██
+  ██████  ██   ██    ██    ██   ██ ██████  ██   ██ ███████ ███████
+  */
+
+  modules
+  mysql
+    #sqlConnection = mysql.createConnection(#configFile.mysql)
+
+    #sqlConnection.on('error', #errcb(err) {
+      #callback/printErr
+      #sqlConnection.end()
+    })
+
+    var #query = #sqlConnection.format(#sqlQuerye.g.'Insert into table set ? ;', #objectToReplace?)
+    #sqlConnection(#query, function(err,data){
+    if (err){
+      #callback(err)
+    }else if(data == null){
+      #callback('empty')
+    else{
+      #callback(,data)
+      data.forEach(#functionAppliedToEachItemInList(row){
+        row.#rowName
+      })
+    }
+    #sqlConnection.end()
+    })
+
+  init.sql - sql to create the database and table
+  config.sql - layout of the sql database and tables plus credentials to connect to the database
